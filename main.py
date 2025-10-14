@@ -14,7 +14,6 @@ class FitIn(BaseModel):
     p: int
     q: int
 
-
 # `FitOut` class
 class FitOut(FitIn):
     success: bool
