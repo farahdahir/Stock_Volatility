@@ -59,11 +59,16 @@ The volatility prediction model uses the GARCH(1,1) framework, which captures vo
 - Validation – Performed using walk-forward validation to simulate real-world forecasting.
 
 **Key Metrics**
-Metric | Description| Result
-AIC | Akaike Information Criterion | 6074.62
+
+Bayesian Information Criterion
 
 
-![Feature Importance of XGBoost](images/feature_importance.png)
+| Metric | Description | Result
+|:--- | :-------- | :-------- |
+| AIC | Akaike Information Criterion | 6074.62 |
+| BIC | Bayesian Information Criterion | 6097.02 |
+| α | Short-term volatility response | 0.1059 |
+| β | Long-term volatility persistence | 0.7988 |
 
 # Conclusion
 The data-driven analysis has provided valuable insights into the factors influencing employee turnover at Salifort Motors. The XGBoost model, outperforming other models, has identified critical predictors such as last_evaluation, number_project, tenure, salary levels (especially "salary_low"), and overwork status. Recomendations were made such as considering project delegation, workload balancing, and resource allocation adjustments to reduce overwork. Explore the possibility of predicting other critical factors such as employee performance scores or satisfaction levels and assess whether these alternative targets provide meaningful insights into employee turnover and satisfaction, could be the next steps.
@@ -80,4 +85,5 @@ The data-driven analysis has provided valuable insights into the factors influen
 The project has 3 files and 2 folders. The `salifort_motors.ipynb` is the main notebook for the project. It is divided into sections alining with the PACE frame-work Plan, Analyse, Construct and Execute. For the Construct stage some code cells are commented out, where the predictive models are fitted to save you time. This does not affect the overral work flow of the project, since the models were fitted and saved as pickle files.
 
 The project also includes an images folder and data folder. Remember all datasets are stored in the data folder along with the pickled models.
+
 
