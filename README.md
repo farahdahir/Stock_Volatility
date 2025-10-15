@@ -92,13 +92,14 @@ This project demonstrates how to design and deploy a complete data science solut
 
 ----
 ----
-
-| Tech Stack |
+# Tech Stack
+| Tools |
 |:--- |
-| Python (pandas, numpy, matplotlib, arch, statsmodels |
+| Python (pandas, numpy, matplotlib, arch, statsmodels) |
 | Database: SQLite |
 | API & Deployment: FastAPI, Uvicorn |
 | Version Control: Git & GitHub |
+
 
 
 
