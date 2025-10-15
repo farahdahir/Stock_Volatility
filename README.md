@@ -67,21 +67,39 @@ The volatility prediction model uses the GARCH(1,1) framework, which captures vo
 | α | Short-term volatility response | 0.1059 |
 | β | Long-term volatility persistence | 0.7988 |
 
+**Model Evaluation**
+
+- The conditional volatility curve tracks observed returns closely.
+- Standardized residuals show no autocorrelation, confirming model adequacy.
+- Model successfully forecasts short-term volatility (1–10 days ahead).
+
+**Deployment**
+
+The trained model is deployed via FastAPI, enabling real-time prediction through HTTP endpoints.
+
 # Conclusion
-The data-driven analysis has provided valuable insights into the factors influencing employee turnover at Salifort Motors. The XGBoost model, outperforming other models, has identified critical predictors such as last_evaluation, number_project, tenure, salary levels (especially "salary_low"), and overwork status. Recomendations were made such as considering project delegation, workload balancing, and resource allocation adjustments to reduce overwork. Explore the possibility of predicting other critical factors such as employee performance scores or satisfaction levels and assess whether these alternative targets provide meaningful insights into employee turnover and satisfaction, could be the next steps.
+This project demonstrates how to design and deploy a complete data science solution — from data ingestion to production-ready API.
+
+**Key Takeaways**
+- Volatility modeling with GARCH captures essential financial patterns.
+- Data persistence with SQLite supports modularity and reproducibility.
+- FastAPI integration makes the model accessible to both humans and systems.
+
+**Next Steps**
+- Extend to LSTM or hybrid models for nonlinear volatility behavior.
+- Add dashboard visualization using Streamlit or Dash.
+- Integrate real-time data streaming for continuous model updates.
 
 ----
 ----
 
-# Installation
-- Clone this repo to your computer. `git clone` <[repository_url](https://github.com/farahdahir/Salifort_Motors)>
-- Navigate to the project directory: using `cd Salifort_Motors`
-- Install the required libraries from the `requirements.txt` file using pip: `pip install -r requirements.txt`
+| Tech Stack |
+|:--- |
+| Python (pandas, numpy, matplotlib, arch, statsmodels |
+| Database: SQLite |
+| API & Deployment: FastAPI, Uvicorn |
+| Version Control: Git & GitHub |
 
-# Reviewing the Project
-The project has 3 files and 2 folders. The `salifort_motors.ipynb` is the main notebook for the project. It is divided into sections alining with the PACE frame-work Plan, Analyse, Construct and Execute. For the Construct stage some code cells are commented out, where the predictive models are fitted to save you time. This does not affect the overral work flow of the project, since the models were fitted and saved as pickle files.
-
-The project also includes an images folder and data folder. Remember all datasets are stored in the data folder along with the pickled models.
 
 
 
